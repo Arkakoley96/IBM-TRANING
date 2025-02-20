@@ -1,0 +1,39 @@
+:root{
+    --primary-color:blue;
+    --secondary-color:yellow;
+    --front-color:green;
+}
+#parent{
+    /* width: 100%; */
+    border: 1px solid grey;
+    /* height: 400px; */
+    background-color: bisque;
+   
+    
+    
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+}
+#parent>div:nth-child(3){
+    background-color: blue;
+    grid-area: 1/2/5/4;
+}
+#parent>div:nth-child(1){
+    
+    background-color: var(--primary-color);
+}
+
+#parent>div{
+    width: 200px;
+    border: 1px solid green;
+    height: 200px;
+    background-color: aqua;
+    margin-right: 10px;
+}
+
+@media screen and (max-width: 768px){
+    #parent{
+        grid-template-columns: repeat(3,1fr);
+    }
+}
+    
