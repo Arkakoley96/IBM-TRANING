@@ -194,7 +194,21 @@ function showData(array){
 
     });
 
-    showData
+    showData(data);
+    let arr =[];
+    function addTocart(el,index){
+      for(let i=0;i<arr.length;i++){
+        if (arr[i].id == el.id){
+          return alert("data already exist")
+        }
+      }
+      arr.push(el);
+      localStorage.setItem("Datacart",JSON.stringify(arr));
+      alert("data add to cart");
+    }
+    function{
+      
+    }
 
     
 
